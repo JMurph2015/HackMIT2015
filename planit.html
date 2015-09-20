@@ -1,0 +1,25 @@
+<head>
+  <title>PlanIt</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="titlebar">
+    <img id="menuIcon" src="ic_menu_48px.svg">
+    <h1 class="titlebar">PlanIt, the Tinder for your schedule.</h1>
+    <img id="addIcon" src="ic_add_48px.svg">
+  </div>
+</body>
+
+<template name="schedule">
+  <div class="schedule-entry">
+    <h1>{{entry.name}}</h1>
+    <h2>{{entry.time}}</h2>
+    {{#if entry.place }}
+      <h2>{{entry.place}}</h2>
+    {{/if}}
+    {{#if entry.details }}
+      <p>{{entry.details}}</p>
+    {{/if}}
+  </div>
+</template>
